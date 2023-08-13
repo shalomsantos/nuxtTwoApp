@@ -25,11 +25,16 @@
     <v-btn color="success"><v-icon>mdi-heart</v-icon></v-btn>
     <v-btn color="success"><v-icon>mdi-dots-vertical</v-icon></v-btn>
     <v-btn color="success"><v-icon>mdi-magnify</v-icon></v-btn>
+    {{ ip }}
   </v-container>
 </template>
 
-<script lang="ts">
+<script>
 export default {
+  async asyncData({ $axios }) {
+    const ip = await $axios.$get('https://fakestoreapi.com/products/1')
+    return { ip }
+  },
   data: () => ({
     items: [
       {

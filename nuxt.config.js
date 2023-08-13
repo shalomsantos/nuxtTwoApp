@@ -27,7 +27,7 @@ export default {
     '@nuxtjs/vuetify',
   ],
 
-  modules: [],
+  modules: ['@nuxtjs/axios'],
 
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
