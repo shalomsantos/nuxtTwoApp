@@ -25,7 +25,16 @@
     <v-btn color="success"><v-icon>mdi-heart</v-icon></v-btn>
     <v-btn color="success"><v-icon>mdi-dots-vertical</v-icon></v-btn>
     <v-btn color="success"><v-icon>mdi-magnify</v-icon></v-btn>
-    {{ ip }}
+    <v-sheet class="d-flex flex-column">
+      <p>{{ ip.id }}</p>
+      <p>{{ ip.title }}</p>
+      <p>{{ ip.price }}</p>
+      <p>{{ ip.description }}</p>
+      <p>{{ ip.category }}</p>
+      <p>{{ ip.image }}</p>
+      <p>{{ ip.rating.rate }}</p>
+      <p>{{ ip.rating.count }}</p>
+    </v-sheet>
   </v-container>
 </template>
 
